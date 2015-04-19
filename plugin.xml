@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="com.phonegap.plugins.barcodescanner"
+    id="net.roughshod.plugins.barcodescanner"
     version="2.2.0">
 
     <name>BarcodeScanner</name>
-    <description>You can use the BarcodeScanner plugin to scan different types of barcodes (using the device's camera) and get the metadata encoded in them for processing within your application.</description>
+    <description>You can use the BarcodeScanner plugin to scan different types of barcodes (using the device's camera) and get the metadata encoded in them for processing within your application. This version has been forked from the official phonegap plugin to support devices with high resolutions.</description>
     <license>MIT</license>
 
-    <repo>https://github.com/wildabeast/BarcodeScanner</repo>
-    <issue>https://github.com/wildabeast/BarcodeScanner/issues</issue>
+    <repo>https://github.com/RoughshodNetworks/phonegap-plugin-barcodescanner</repo>
+    <issue>https://github.com/RoughshodNetworks/phonegap-plugin-barcodescanner/issues</issue>
 
     <engines>
         <engine name="cordova" version=">=3.0.0" />
@@ -55,13 +55,13 @@
 
         <!--
         <config-file target="res/xml/plugins.xml" parent="/plugins">
-            <plugin name="BarcodeScanner" value="com.phonegap.plugins.barcodescanner.BarcodeScanner"/>
+            <plugin name="BarcodeScanner" value="net.roughshod.plugins.barcodescanner.BarcodeScanner"/>
         </config-file>
         -->
 
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="BarcodeScanner">
-                <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
+                <param name="android-package" value="net.roughshod.plugins.barcodescanner.BarcodeScanner" />
             </feature>
         </config-file>
 
@@ -81,7 +81,7 @@
             </activity>
             <activity android:name="com.google.zxing.client.android.encode.EncodeActivity" android:label="@string/share_name">
                 <intent-filter>
-                    <action android:name="com.phonegap.plugins.barcodescanner.ENCODE"/>
+                    <action android:name="net.roughshod.plugins.barcodescanner.ENCODE"/>
                     <category android:name="android.intent.category.DEFAULT"/>
                 </intent-filter>
             </activity>
